@@ -63,10 +63,19 @@
     <Content Include="App_Data\CarritoDb_log.ldf">
       <DependentUpon>CarritoDb.mdf</DependentUpon>
     </Content>
+    <Content Include="Consulta_Carrito.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Registro_Carrito.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consulta_Carrito.aspx.cs">
+      <DependentUpon>Consulta_Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta_Carrito.aspx.designer.cs">
+      <DependentUpon>Consulta_Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -86,6 +95,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Carrito.aspx.cs">
+      <DependentUpon>Registro_Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_Carrito.aspx.designer.cs">
+      <DependentUpon>Registro_Carrito.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
