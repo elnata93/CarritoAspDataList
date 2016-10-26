@@ -63,12 +63,26 @@
     <Content Include="App_Data\CarritoDb_log.ldf">
       <DependentUpon>CarritoDb.mdf</DependentUpon>
     </Content>
+    <Content Include="Catalogo.aspx" />
     <Content Include="Consulta_Carrito.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="Registro_Carrito.aspx" />
+    <Content Include="Imagenes\00000000dsc00117chico.jpg" />
+    <Content Include="Imagenes\0010514427.jpg" />
+    <Content Include="Imagenes\41-Ingenieria-en-Sistemas.jpg" />
+    <Content Include="Imagenes\ingeniero en sistemascomputacioinales %282%29.jpg" />
+    <Content Include="Imagenes\news_photo_63107_1430407010_630.jpg" />
+    <Content Include="Imagenes\trabajando-en-portatil.jpg" />
+    <Content Include="Registro_Articulos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogo.aspx.cs">
+      <DependentUpon>Catalogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogo.aspx.designer.cs">
+      <DependentUpon>Catalogo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consulta_Carrito.aspx.cs">
       <DependentUpon>Consulta_Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,12 +110,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Registro_Carrito.aspx.cs">
-      <DependentUpon>Registro_Carrito.aspx</DependentUpon>
+    <Compile Include="Registro_Articulos.aspx.cs">
+      <DependentUpon>Registro_Articulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registro_Carrito.aspx.designer.cs">
-      <DependentUpon>Registro_Carrito.aspx</DependentUpon>
+    <Compile Include="Registro_Articulos.aspx.designer.cs">
+      <DependentUpon>Registro_Articulos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +131,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{458ee51e-46a1-4eab-b422-6b966b5c0a11}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

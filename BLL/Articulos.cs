@@ -13,7 +13,7 @@ namespace BLL
         public int ArticuloId { get; set; }
         public string Imagen { get; set; }
         public string Descripcion { get; set; }
-        public float Precio { get; set; }
+        public double Precio { get; set; }
 
         public Articulos()
         {
@@ -23,7 +23,7 @@ namespace BLL
             this.Precio = 0;
         }
 
-        public Articulos(int articuloId,string imagen,string descripcion,float precio)
+        public Articulos(int articuloId,string imagen,string descripcion,double precio)
         {
             this.ArticuloId = articuloId;
             this.Imagen = imagen;
@@ -87,7 +87,7 @@ namespace BLL
                     this.ArticuloId = (int)dt.Rows[0]["ArticuloId"];
                     this.Imagen = dt.Rows[0]["Imagen"].ToString();
                     this.Descripcion = dt.Rows[0]["Descripcion"].ToString();
-                    this.Precio = (float)dt.Rows[0]["Precio"];
+                    this.Precio = (double)dt.Rows[0]["Precio"];
                 }
             }
             catch (Exception ex)
@@ -105,6 +105,12 @@ namespace BLL
             if (!Orden.Equals(""))
                 OrdenFinal = "Oder by" + Orden;
             return conexion.ObtenerDatos("select" + Campos + "from Articulos where " + Condicion + Orden);
+        }
+
+        public  DataTable ListArticulo1(string condicion)
+        {
+            ConexionDb conex = new ConexionDb();
+            return  conex.ObtenerDatos("select ArticuloId,Descripcion,Precio from Articulos where ArticuloId= " + condicion);
         }
     }
 }
